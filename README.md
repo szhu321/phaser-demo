@@ -109,3 +109,86 @@ Note: CommonJS may cause problems with
 npm run build
 ```
 8. As the final step run index.html in the dist folder with a web server of your choice. I used Live Server, which can be found as an extension in VScode.
+
+
+### Adding some Phaser starter code
+Now we are ready to add some starter code.
+1. Update index.html to include a style tag and a new div tag with id game.
+```html
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phaser</title>
+    <style>
+        body {
+            margin: 0
+        }
+    </style>
+</head>
+<body>
+    <div id="game"></div>
+    <script src="bundle.js"></script>
+</body>
+</html>
+```
+
+2. Inside the src folder and create a new folder scenes. Inside the scenes folder create a file called Game.ts.
+```Typescript
+import Phaser from 'phaser';
+
+export default class Game extends Phaser.Scene {
+
+    constructor() {
+        super('GameScene');
+    }
+
+    create() {
+        const color = 0x000000;
+        const rect = this.add.rectangle(250, 150, 50, 50, color);
+
+        this.tweens.add({
+            targets: rect,
+            y: 500,
+            duration: 3000,
+            ease: 'Sine.inOut',
+            yoyo: true,
+            repeat: -1,
+        });
+    }
+}
+```
+
+3. Create a new file in the src folder called config.ts
+```Typescript
+import Phaser from 'phaser';
+
+export default {
+    type: Phaser.AUTO,
+    parent: 'game',
+    backgroundColor: `#333333`,
+    scale: {
+        width: 800,
+        height: 600,
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+    }
+};
+```
+
+4. Update app.ts with the following
+```Typescript
+import Phaser from 'phaser';
+import config from './config';
+import GameScene from './scenes/Game';
+
+// Create a new Phaser game with predefined config and scene
+new Phaser.Game(
+    Object.assign(config, {
+        scene: [GameScene]
+    })
+);
+```
+
+5. Finally rerun webpack with 'npm run build' and open index.html with a webserver.

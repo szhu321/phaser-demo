@@ -7,6 +7,13 @@ In this section we will see how we can set up phaser 3 with typescript. I will b
 ### NPM
 Before we start we need to download npm (node package manager), which we will use to manage our packages. You can download it [here](https://nodejs.org/en/). Downloading Node.js will also download npm.
 
+Make sure to create a .gitignore file if you are using git. Here is a template:
+```.gitignore
+node_modules/
+dist/bundle.js
+dist/bundle.js.LICENSE.txt
+```
+
 ### Phaser 3 
 Now we can start downloading our packages.
 1. To start open up VS Code or your editor of choice.

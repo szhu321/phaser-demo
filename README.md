@@ -192,3 +192,7 @@ new Phaser.Game(
 ```
 
 5. Finally rerun webpack with 'npm run build' and open index.html with a webserver.
+
+
+# Credits
+Thanks to geocine for [starter project](https://github.com/geocine/phaser3-rollup-typescript)  

@@ -9,5 +9,5 @@ export default {
         height: 600,
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH,
-    }
+    },
 };

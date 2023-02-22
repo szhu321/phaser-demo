@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
     mode: 'development', // development build or production build
     devtool: 'inline-source-map', // source maps provide useful information durning development
-    entry: './src/app.js', // Webpack will initilally look here
+    entry: './src/app.ts', // Webpack will initilally look here
     output: {
         path: path.resolve(__dirname, 'dist'), // The output file path
         filename: 'bundle.js' // Output file name

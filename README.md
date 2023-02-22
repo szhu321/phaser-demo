@@ -29,7 +29,7 @@ npm i phaser
 Webpack is a bundler that combines all of our source files into a single Javascript file.  
 To install run:
 ```bash
-npm i webpack webpack-cli ts-loader -D
+npm i webpack webpack-cli ts-loader typescript -D
 ```
 The -D option will install the packages as dev dependencies. The webpack-cli allows us to run webpack in the terminal. The ts-loader allows webpack to complie ts files.
 

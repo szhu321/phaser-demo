@@ -1,5 +1,5 @@
 # Learn Phaser
-This document will contain tutorials on Phaser related topics.
+This document will contain tutorials on Phaser related topics. The different demo projects will be organized in different branches. This main branch(this branch) will contain a starter project with phaser and typescript.
 
 ## Phaser 3 with Typescript
 In this section we will see how we can set up phaser 3 with typescript. I will be using [VS code](https://code.visualstudio.com/) as my IDE of choice.

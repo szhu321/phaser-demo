@@ -1,5 +1,4 @@
 import Phaser from 'phaser';
-import Colyseus from  'colyseus.js';
 
 export default class GameScene extends Phaser.Scene {
 
@@ -19,9 +18,6 @@ export default class GameScene extends Phaser.Scene {
             yoyo: true,
             repeat: -1,
         });
-
-        // Connecting to the server
-        const client = new Colyseus.Client('ws://localhost:2567');
         
     }
 }
